@@ -50,5 +50,6 @@ def main():
     file = open('notes.txt', 'w')
     for line in lines:
         file.write(line + '\n')
+    file.close()
 
 main()
