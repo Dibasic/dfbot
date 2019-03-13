@@ -7,10 +7,10 @@ twitter = tweepy.API(twitter_auth)
 
 def main():
     while True:
-    print('Running...')
-    content = get_content()
-    twitter.update_status(content)
-    time.sleep(INTERVAL)
+        print('Running...')
+        content = get_content()
+        twitter.update_status(content)
+        time.sleep(INTERVAL)
 
 def get_content():
     file = open('notes.txt', 'r')
