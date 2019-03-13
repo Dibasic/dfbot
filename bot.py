@@ -6,7 +6,6 @@ twitter_auth.set_access_token(DFBOT_TWITTER_ACCESS_KEY, DFBOT_TWITTER_ACCESS_SEC
 twitter = tweepy.API(twitter_auth)
 
 def main():
-
     while True:
     print('Running...')
     content = get_content()
