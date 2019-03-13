@@ -1,9 +1,9 @@
 from config import *
 import random, sys, time, tweepy
 
-twitter_auth = tweepy.OAuthHandler(DFBOT_TWITTER_CONSUMER_KEY, DFBOT_TWITTER_CONSUMER_SECRET)
-twitter_auth.set_access_token(DFBOT_TWITTER_ACCESS_KEY, DFBOT_TWITTER_ACCESS_SECRET)
-twitter = tweepy.API(twitter_auth)
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
+twitter = tweepy.API(auth)
 
 def main():
     while True:
