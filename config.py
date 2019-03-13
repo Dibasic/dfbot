@@ -11,4 +11,4 @@ ACCESS_KEY      = os.environ['DFBOT_TWITTER_ACCESS_KEY']        if 'DFBOT_TWITTE
 ACCESS_SECRET   = os.environ['DFBOT_TWITTER_ACCESS_SECRET']     if 'DFBOT_TWITTER_ACCESS_SECRET'    in os.environ else 'DFBOT_TWITTER_ACCESS_SECRET'
 
 # INTERVAL: time between each Tweet, in seconds
-INTERVAL = int(os.environ['DFBOT_INTERVAL']) if 'DFBOT_INTERVAL' in os.environ else 60 * 60 * 6
+INTERVAL = os.environ['DFBOT_INTERVAL'] if 'DFBOT_INTERVAL' in os.environ else 60 * 60 * 6

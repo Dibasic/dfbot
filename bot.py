@@ -10,7 +10,7 @@ def main():
         print('Running...')
         content = get_content()
         twitter.update_status(content)
-        time.sleep(INTERVAL)
+        time.sleep(int(INTERVAL))
 
 def get_content():
     file = open('notes.txt', 'r')
