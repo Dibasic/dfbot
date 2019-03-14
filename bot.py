@@ -18,6 +18,6 @@ def get_content():
     for line in file.readlines():
         lines.append(line)
     file.close()
-    return random.choice(lines)
+    return random.choice(lines)[:280]
 
 main()
