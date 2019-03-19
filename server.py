@@ -5,8 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    json_data = {'Hello': 'World!'}
-    return jsonify(json_data)
+    return '<h1>200 OK</h1><p>This page exists to return HTTP 200.</p>'
 
 if __name__ == '__main__':
     app.run(host=HOST, port=PORT)
