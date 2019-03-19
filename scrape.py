@@ -16,7 +16,7 @@ def handle_url(url):
         page = requests.get(url, headers)
     except Exception as e:
         handle_content('bay12games.com is offline during build!')
-    else if page.status_code == 200:
+    elif page.status_code == 200:
         handle_content(page.content)
         return True
     return False
