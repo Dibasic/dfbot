@@ -12,12 +12,14 @@ def handle_year(year):
     return handle_url(f'http://www.bay12games.com/dwarves/dev_{year}.html')
 
 def handle_url(url):
-    page = requests.get(url, headers)
-    if page.status_code == 200:
+    try:
+        page = requests.get(url, headers)
+    except Exception as e:
+        handle_content('bay12games.com is offline during build!')
+    else if page.status_code == 200:
         handle_content(page.content)
         return True
-    else:
-        return False
+    return False
 
 def handle_content(content):
     tree = html.fromstring(content)
