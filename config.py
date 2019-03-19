@@ -1,5 +1,8 @@
 import os
 
+# Heroku wants a server to exist.
+PORT = os.environ['DFBOT_PORT'] if 'DFBOT_PORT' in os.environ else '80'
+
 # Twitter authentication variables
 CONSUMER_KEY    = os.environ['DFBOT_TWITTER_CONSUMER_KEY']      if 'DFBOT_TWITTER_CONSUMER_KEY'     in os.environ else 'DFBOT_TWITTER_CONSUMER_KEY'
 CONSUMER_SECRET = os.environ['DFBOT_TWITTER_CONSUMER_SECRET']   if 'DFBOT_TWITTER_CONSUMER_SECRET'  in os.environ else 'DFBOT_TWITTER_CONSUMER_SECRET'
