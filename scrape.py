@@ -1,16 +1,18 @@
 from lxml import html
-import io, re, requests, string
+import config, io, re, requests, string
 
 clause_pattern = re.compile(r'(?:[.,;] +|\n{2,})')
 date_pattern = re.compile(r'^ *\d\d/\d\d/\d\d\d\d')
 release_pattern = re.compile(r'^[\n\t\s]*Released ')
 file = open('notes.txt', 'w')
 
+headers = requests.utils.default_headers()
+
 def handle_year(year):
     return handle_url(f'http://www.bay12games.com/dwarves/dev_{year}.html')
 
 def handle_url(url):
-    page = requests.get(url)
+    page = requests.get(url, headers)
     if page.status_code == 200:
         handle_content(page.content)
         return True
@@ -31,6 +33,11 @@ def handle_text(text):
 
 def main():
     global file
+
+    headers.update({
+        'User-Agent': USER_AGENT
+    });
+
     year = 2004
     while True:
         status = handle_year(year)

@@ -4,6 +4,8 @@ import os
 HOST = '0.0.0.0'
 PORT = os.environ['PORT'] if 'PORT' in os.environ else '80'
 
+USER_AGENT = os.environ['DFBOT_USER_AGENT'] if 'DFBOT_USER_AGENT' in os.environ else 'twitter@dfpatchnotesbot - requests only once per build - https://github.com/Dibasic/dfbot'
+
 # Twitter authentication variables
 CONSUMER_KEY    = os.environ['DFBOT_TWITTER_CONSUMER_KEY']      if 'DFBOT_TWITTER_CONSUMER_KEY'     in os.environ else 'DFBOT_TWITTER_CONSUMER_KEY'
 CONSUMER_SECRET = os.environ['DFBOT_TWITTER_CONSUMER_SECRET']   if 'DFBOT_TWITTER_CONSUMER_SECRET'  in os.environ else 'DFBOT_TWITTER_CONSUMER_SECRET'
