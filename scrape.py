@@ -18,6 +18,7 @@ def handle_url(url):
     except Exception as e:
         pass
     else:
+        pass
         if page.status_code and == 200:
             handle_content(page.content)
             return True
