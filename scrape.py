@@ -19,7 +19,7 @@ def handle_url(url):
         pass
     else:
         pass
-        if page.status_code and == 200:
+        if page.status_code == 200:
             handle_content(page.content)
             return True
     return False
