@@ -1,5 +1,6 @@
+from config import *
 from lxml import html
-import config, io, re, requests, string
+import io, re, requests, string
 
 clause_pattern = re.compile(r'(?:[.,;] +|\n{2,})')
 date_pattern = re.compile(r'^ *\d\d/\d\d/\d\d\d\d')
