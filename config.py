@@ -1,7 +1,7 @@
 import os
 
 # Heroku wants a server to exist.
-HOST = 'localhost'
+HOST = '0.0.0.0'
 PORT = os.environ['PORT'] if 'PORT' in os.environ else '80'
 
 # Twitter authentication variables
